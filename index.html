@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <title>Title</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="https://cdn.metroui.org.ua/current/metro.css" />
+    </head>
+    <body>
+        <h1 class="title" id="hTitle">Tarea</h1>
+        <div>
+            Limpiar canvas con color de fondo: <input type="color" id="bgColorSelector" value="#ff0000" onchange="changeBgColor()" />
+            <br/>
+            Seleccionar color de línea: <input type="color" id="lnColorSelector" value="#0000ff"/>
+        </div>
+        <div>
+            <canvas id="myCanvas" height="500" width="500" style="border: 1px solid black;" onclick="addPointAndDraw()"> </canvas>
+        </div>
+        
+        <a href="https://www.w3schools.com/jsref/api_canvas.asp">Canvas Reference</a>
+
+        <script src="script.js"></script>
+        <!-- Metro UI -->
+        <script src="https://cdn.metroui.org.ua/current/metro.js"></script>
+    </body>
+</html>
