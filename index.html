@@ -3,25 +3,88 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-        <title>Title</title>
+        <title>Calculadora y Graficadora</title>
         <link rel="stylesheet" href="styles.css" />
         <link rel="stylesheet" href="https://cdn.metroui.org.ua/current/metro.css" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
     </head>
     <body>
-        <h1 class="title" id="hTitle">Tarea</h1>
-        <div>
-            Limpiar canvas con color de fondo: <input type="color" id="bgColorSelector" value="#ff0000" onchange="changeBgColor()" />
-            <br/>
-            Seleccionar color de línea: <input type="color" id="lnColorSelector" value="#0000ff"/>
+
+        <div class="container mt-5">
+            <h1 class="text-center mb-4">Calculadora y Graficadora</h1>
+    
+              <!-- Calculadora -->
+              <div class="calculator card shadow-lg p-3 mb-5 bg-white rounded">
+                <div class="card-body">
+                    <h2 class="text-center mb-4">Calculadora</h2>
+                    <input type="text" class="calculator-screen form-control mb-3 text-right" value="" disabled />
+                    
+                    <!-- Botones de la calculadora -->
+                    <div class="calculator-keys d-grid gap-2">
+                        <button type="button" class="operator btn btn-info" value="+">+</button>
+                        <button type="button" class="operator btn btn-info" value="-">-</button>
+                        <button type="button" class="operator btn btn-info" value="*">&times;</button>
+                        <button type="button" class="operator btn btn-info" value="/">&divide;</button>
+                        <button type="button" class="operator btn btn-info" value="^">^</button>
+                        <button type="button" class="operator btn btn-info" value="%">%</button>
+
+                        <button type="button" class="btn btn-light" value="7">7</button>
+                        <button type="button" class="btn btn-light" value="8">8</button>
+                        <button type="button" class="btn btn-light" value="9">9</button>
+                        <button type="button" class="btn btn-light" value="4">4</button>
+                        <button type="button" class="btn btn-light" value="5">5</button>
+                        <button type="button" class="btn btn-light" value="6">6</button>
+                        <button type="button" class="btn btn-light" value="1">1</button>
+                        <button type="button" class="btn btn-light" value="2">2</button>
+                        <button type="button" class="btn btn-light" value="3">3</button>
+                        <button type="button" class="btn btn-light" value="0">0</button>
+                        <button type="button" class="btn btn-secondary" value=".">.</button>
+                        <button type="button" class="btn btn-danger" value="all-clear">AC</button>
+                        <button type="button" class="btn btn-success" value="="><i class="fas fa-equals"></i></button>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Graficadora -->
+            <div class="card mt-4 shadow-lg p-3 mb-5 bg-white rounded">
+                <div class="card-body">
+                    <h2 class="text-center mb-4">Graficadora</h2>
+                    <div class="form-group">
+                        <label>Limpiar canvas con color de fondo:</label>
+                        <input type="color" id="bgColorSelector" value="#ff0000" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Seleccionar color de línea:</label>
+                        <input type="color" id="lnColorSelector" value="#0000ff" class="form-control">
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <canvas id="myCanvas" height="500" width="500" style="border: 2px solid #000; background-color: #f8f9fa;"></canvas>
+                    </div>
+                    <div class="mt-3 d-flex justify-content-center flex-wrap">
+                        <button class="btn btn-secondary m-1" onclick="drawGraph('sin')">Seno</button>
+                        <button class="btn btn-secondary m-1" onclick="drawGraph('cos')">Coseno</button>
+                        <button class="btn btn-secondary m-1" onclick="drawGraph('tan')">Tangente</button>
+                        <button class="btn btn-secondary m-1" onclick="drawGraph('cot')">Cotangente</button>
+                        <button class="btn btn-secondary m-1" onclick="drawGraph('sec')">Secante</button>
+                        <button class="btn btn-secondary m-1" onclick="drawGraph('csc')">Cosecante</button>
+                    </div>
+                </div>
+            </div>
+    
+            <footer class="text-center mt-4">
+                <p>Gabriela Shaooli y Natalia Casarin</p>
+            </footer>
         </div>
-        <div>
-            <canvas id="myCanvas" height="500" width="500" style="border: 1px solid black;" onclick="addPointAndDraw()"> </canvas>
-        </div>
-        
+    
         <a href="https://www.w3schools.com/jsref/api_canvas.asp">Canvas Reference</a>
 
         <script src="script.js"></script>
-        <!-- Metro UI -->
         <script src="https://cdn.metroui.org.ua/current/metro.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     </body>
-</html>
+    </html>
+    
