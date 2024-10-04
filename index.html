@@ -1,51 +1,86 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-        <title>Calculadora y Graficadora</title>
-        <link rel="stylesheet" href="styles.css" />
-        <link rel="stylesheet" href="https://cdn.metroui.org.ua/current/metro.css" />
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    </head>
-    <body>
-        <div class="container mt-5">
-            <h1 class="text-center mb-4">Calculadora y Graficadora</h1>
-    
-            <!-- Calculadora -->
-            <div class="calculator card shadow-lg p-3 mb-5 bg-white rounded">
-                <div class="card-body">
-                    <h2 class="text-center mb-4">Calculadora</h2>
-                    <input type="text" class="calculator-screen form-control mb-3 text-right" value="0" disabled />
-                    
-                    <!-- Botones de la calculadora -->
-                    <div class="calculator-keys d-grid gap-2">
-                        <button type="button" class="operator btn btn-info" value="+">+</button>
-                        <button type="button" class="operator btn btn-info" value="-">-</button>
-                        <button type="button" class="operator btn btn-info" value="*">&times;</button>
-                        <button type="button" class="operator btn btn-info" value="/">&divide;</button>
-                        <button type="button" class="operator btn btn-info" value="^">^</button>
-                        <button type="button" class="operator btn btn-info" value="%">%</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Calculadora y Graficadora</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1 class="text-center mb-4">Calculadora y Graficadora</h1>
 
-                        <button type="button" class="btn btn-light" value="7">7</button>
-                        <button type="button" class="btn btn-light" value="8">8</button>
-                        <button type="button" class="btn btn-light" value="9">9</button>
-                        <button type="button" class="btn btn-light" value="4">4</button>
-                        <button type="button" class="btn btn-light" value="5">5</button>
-                        <button type="button" class="btn btn-light" value="6">6</button>
-                        <button type="button" class="btn btn-light" value="1">1</button>
-                        <button type="button" class="btn btn-light" value="2">2</button>
-                        <button type="button" class="btn btn-light" value="3">3</button>
-                        <button type="button" class="btn btn-light" value="0">0</button>
-                        <button type="button" class="decimal btn btn-secondary" value=".">.</button>
-                        <button type="button" class="all-clear btn btn-danger" value="all-clear">AC</button>
-                        <button type="button" class="btn btn-success" value="="><i class="fas fa-equals"></i></button>
-                    </div>
-                </div>
-            </div>
+     
+      <div class="calculator card shadow-lg p-3 mb-5 bg-black rounded">
+        <div class="card-body">
+          <h2 class="text-center mb-4">Calculadora</h2>
+          <input
+            type="text"
+            class="calculator-screen form-control mb-3 text-right"
+            value="0"
+            disabled
+          />
+
+          
+          <div class="calculator-keys d-grid gap-2">
+            <button type="button" class="operator btn btn-info" value="+">
+              +
+            </button>
+            <button type="button" class="operator btn btn-info" value="-">
+              -
+            </button>
+            <button type="button" class="operator btn btn-info" value="*">
+              &times;
+            </button>
+            <button type="button" class="operator btn btn-info" value="/">
+              &divide;
+            </button>
+            <button type="button" class="operator btn btn-info" value="^">
+              ^
+            </button>
+            <button type="button" class="operator btn btn-info" value="%">
+              %
+            </button>
+
+            <button type="button" class="btn btn-light" value="7">7</button>
+            <button type="button" class="btn btn-light" value="8">8</button>
+            <button type="button" class="btn btn-light" value="9">9</button>
+            <button type="button" class="btn btn-light" value="4">4</button>
+            <button type="button" class="btn btn-light" value="5">5</button>
+            <button type="button" class="btn btn-light" value="6">6</button>
+            <button type="button" class="btn btn-light" value="1">1</button>
+            <button type="button" class="btn btn-light" value="2">2</button>
+            <button type="button" class="btn btn-light" value="3">3</button>
+            <button type="button" class="btn btn-light" value="0">0</button>
+            <button type="button" class="decimal btn btn-secondary" value=".">
+              .
+            </button>
+            <button
+              type="button"
+              class="all-clear btn btn-danger"
+              value="all-clear"
+            >
+              AC
+            </button>
+            <button type="button" class="operator btn btn-success" value="=">
+              <i class="fas fa-equals"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
     
-            <!-- Graficadora -->
             <div class="card mt-4 shadow-lg p-3 mb-5 bg-white rounded">
                 <div class="card-body">
                     <h2 class="text-center mb-4">Graficadora</h2>
