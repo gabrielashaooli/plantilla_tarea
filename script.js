@@ -108,45 +108,51 @@ function drawGraph(type) {
 
   ctx.clearRect(0, 0, width, height);
 
+  // Dibuja los ejes
   ctx.beginPath();
-  ctx.moveTo(0, height / 2);
+  ctx.moveTo(0, height / 2); // Eje horizontal
   ctx.lineTo(width, height / 2);
   ctx.stroke();
 
-  ctx.moveTo(width / 2, 0);
+  ctx.moveTo(width / 2, 0); // Eje vertical
   ctx.lineTo(width / 2, height);
   ctx.stroke();
 
   ctx.beginPath();
   ctx.strokeStyle = document.getElementById("lnColorSelector").value;
 
-  for (let x = -Math.PI; x < Math.PI; x += 0.01) {
+  for (let x = -width / 2; x < width / 2; x += 1) {
     let y;
     switch (type) {
       case "sin":
-        y = Math.sin(x);
+        y = Math.sin(x / 50); // Ajuste de escala para seno
         break;
       case "cos":
-        y = Math.cos(x);
+        y = Math.cos(x / 50); // Ajuste de escala para coseno
         break;
       case "tan":
-        y = Math.tan(x);
+        y = Math.tan(x / 50); // Ajuste de escala para tangente
         break;
       case "cot":
-        y = 1 / Math.tan(x);
+        y = 1 / Math.tan(x / 50); // Ajuste de escala para cotangente
         break;
       case "sec":
-        y = 1 / Math.cos(x);
+        y = 1 / Math.cos(x / 50); // Ajuste de escala para secante
         break;
       case "csc":
-        y = 1 / Math.sin(x);
+        y = 1 / Math.sin(x / 50); // Ajuste de escala para cosecante
         break;
+      case "parabola": 
+        y = (x / 50) * (x / 50); 
+        break;
+      default:
+        return;
     }
 
-    const canvasX = (x + Math.PI) * (width / (2 * Math.PI));
-    const canvasY = height / 2 - y * (height / 4);
+    const canvasX = x + width / 2;
+    const canvasY = height / 2 - y * 10; // Ajuste de la escala de Y para que la parábola sea visible
 
-    if (x === -Math.PI) {
+    if (x === -width / 2) {
       ctx.moveTo(canvasX, canvasY);
     } else {
       ctx.lineTo(canvasX, canvasY);
@@ -155,3 +161,4 @@ function drawGraph(type) {
 
   ctx.stroke();
 }
+
